@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+        <title>ARjs Project</title>
+    </head>
+    <body>
+        <a-scene embedded arjs>
+            <a-marker preset="hiro">
+                <a-entity id="planet" gltf-model="#planet1-model" position="0 0 0"></a-entity>
+                <a-box position="-1 0.5 -1" rotation="0 45 0" color="#4CC3D9" onclick="changePlanet()">Changer Planet</a-box>
+            </a-marker>
+            <a-assets>
+                <a-asset-item id="planet1-model" src="planet1.glb"></a-asset-item>
+                <a-asset-item id="planet2-model" src="planet2.glb"></a-asset-item>
+            </a-assets>
+        </a-scene>    
+        <script src="script.js"></script>
+    </body>
+</html>
